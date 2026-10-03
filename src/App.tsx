@@ -5,6 +5,12 @@ import AboutPage from '@/pages/AboutPage';
 import SolutionsPage from '@/pages/SolutionsPage';
 import SecurityPage from '@/pages/solutions/SecurityPage';
 import SmartCampusPage from '@/pages/solutions/SmartCampusPage';
+import MeetingRoomPage from '@/pages/solutions/MeetingRoomPage';
+import ProcurementPage from '@/pages/solutions/ProcurementPage';
+import DigitalServicesPage from '@/pages/solutions/DigitalServicesPage';
+import AppDevelopmentPage from '@/pages/solutions/AppDevelopmentPage';
+import PrinterRentalPage from '@/pages/solutions/PrinterRentalPage';
+import ManPowerPage from '@/pages/solutions/ManPowerPage';
 import LmsPage from '@/pages/solutions/LmsPage';
 import InfrastructurePage from '@/pages/solutions/InfrastructurePage';
 import ExperiencesPage from '@/pages/ExperiencesPage';
@@ -22,9 +28,21 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/solutions/security" element={<SecurityPage />} />
-          <Route path="/solutions/smart-campus" element={<SmartCampusPage />} />
+          <Route path="/solutions/meeting-room-solution" element={<MeetingRoomPage />} />
+          <Route
+            path="/solutions/laptop-pc-printer-procurement"
+            element={<ProcurementPage />}
+          />
+          <Route path="/solutions/smart-audio-visual" element={<SmartCampusPage />} />
           <Route path="/solutions/lms" element={<LmsPage />} />
           <Route path="/solutions/infrastructure" element={<InfrastructurePage />} />
+          <Route
+            path="/solutions/digital-services-peripheral-provider"
+            element={<DigitalServicesPage />}
+          />
+          <Route path="/solutions/app-development" element={<AppDevelopmentPage />} />
+          <Route path="/solutions/laptop-pc-printer-rental" element={<PrinterRentalPage />} />
+          <Route path="/solutions/man-power" element={<ManPowerPage />} />
           <Route path="/experiences" element={<ExperiencesPage />} />
           <Route path="/partners" element={<PartnersPage />} />
           <Route path="/customers" element={<CustomersPage />} />

@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { Check, Send, AlertCircle } from 'lucide-react';
-import { solutions } from '@/data/solutions';
+import { allSolutions } from '@/data/solutionMenu';
 
 interface FormState {
   name: string;
@@ -23,6 +23,7 @@ const initialState: FormState = {
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const update = (key: keyof FormState, value: string) => {
@@ -30,13 +31,49 @@ export default function ContactForm() {
     setError(null);
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       setError('Please fill in your name, email, and message.');
       return;
     }
-    setSubmitted(true);
+
+    setSending(true);
+    setError(null);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/meraldyridho@gmail.com', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          institution: form.institution || '-',
+          email: form.email,
+          phone: form.phone || '-',
+          solution: form.solution || 'Belum ditentukan',
+          message: form.message,
+          _subject: `Website Contact - ${form.solution || 'General Inquiry'}`,
+          _replyto: form.email,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Email service returned an error');
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError(
+        'Pesan belum berhasil dikirim. Silakan coba lagi atau hubungi kami melalui email langsung.',
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   if (submitted) {
@@ -56,6 +93,7 @@ export default function ContactForm() {
           onClick={() => {
             setForm(initialState);
             setSubmitted(false);
+            setError(null);
           }}
           className="mt-8 text-sm font-semibold text-accent-600 transition-colors hover:text-accent-700"
         >
@@ -83,7 +121,7 @@ export default function ContactForm() {
             value={form.name}
             onChange={(e) => update('name', e.target.value)}
             className={inputClass}
-            placeholder="Nama lengkap Anda"
+            placeholder="Contoh: Budi Santoso"
             required
           />
         </div>
@@ -97,7 +135,7 @@ export default function ContactForm() {
             value={form.institution}
             onChange={(e) => update('institution', e.target.value)}
             className={inputClass}
-            placeholder="Nama organisasi Anda"
+            placeholder="Contoh: PT. Pertamina, Kementerian PPN/Bappenas"
           />
         </div>
       </div>
@@ -143,7 +181,7 @@ export default function ContactForm() {
           className={inputClass}
         >
           <option value="">Pilih solusi</option>
-          {solutions.map((s) => (
+          {allSolutions.map((s) => (
             <option key={s.slug} value={s.title}>
               {s.title}
             </option>
@@ -176,10 +214,13 @@ export default function ContactForm() {
 
       <button
         type="submit"
+        disabled={sending}
         className="group inline-flex items-center gap-2 bg-navy-900 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-navy-800"
       >
-        Kirim pertanyaan
-        <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+        {sending ? 'Mengirim...' : 'Kirim pertanyaan'}
+        {!sending && (
+          <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+        )}
       </button>
     </form>
   );

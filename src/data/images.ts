@@ -1,24 +1,20 @@
 export const images = {
-  heroControlRoom:
-    'https://images.pexels.com/photos/32845700/pexels-photo-32845700.jpeg?auto=compress&cs=tinysrgb&w=1920',
-  heroSecurityRoom:
-    'https://images.pexels.com/photos/30692441/pexels-photo-30692441.jpeg?auto=compress&cs=tinysrgb&w=1920',
-  serverRoom:
-    'https://images.pexels.com/photos/37730212/pexels-photo-37730212.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  dataCenterBlue:
-    'https://images.pexels.com/photos/17489151/pexels-photo-17489151.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  serverRackBlue:
-    'https://images.pexels.com/photos/37730211/pexels-photo-37730211.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  auditorium:
-    'https://images.pexels.com/photos/36834057/pexels-photo-36834057.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  lectureHall:
-    'https://images.pexels.com/photos/276175/pexels-photo-276175.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  onlineLearning:
-    'https://images.pexels.com/photos/5905749/pexels-photo-5905749.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  cctv:
-    'https://images.pexels.com/photos/5966513/pexels-photo-5966513.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  handshake:
-    'https://images.pexels.com/photos/33175650/pexels-photo-33175650.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  networkBlue:
-    'https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  heroControlRoom: '/images/solutions/hero-control-room.jpeg',
+  heroSecurityRoom: '/images/solutions/hero-security-room.jpeg',
+  serverRoom: '/images/solutions/server-room.jpeg',
+  dataCenterBlue: '/images/solutions/data-center-blue.jpeg',
+  serverRackBlue: '/images/solutions/server-rack-blue.jpeg',
+  auditorium: '/images/solutions/auditorium.jpeg',
+  lectureHall: '/images/solutions/lecture-hall.jpeg',
+  onlineLearning: '/images/solutions/online-learning.jpeg',
+  cctv: '/images/solutions/cctv.jpeg',
+  handshake: '/images/solutions/handshake.jpeg',
+  networkBlue: '/images/solutions/network-blue.jpeg',
+  laptoppcprinter: '/images/solutions/laptop:pc:printer.jpg',
+  upsProcurement: '/images/solutions/data-center-blue.jpeg',
+  appDevelopment: '/images/solutions/appdevelopment.png',
+  smartMeetingRoom: '/images/solutions/smartmeetingroom.webp',
+  audiovisual: '/images/solutions/audiovisual.jpg',
+  digitalPeripheral: '/images/solutions/digitalpheriperal.png',
+  itManPower: '/images/solutions/handshake.jpeg',
 };

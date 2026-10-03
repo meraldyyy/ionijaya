@@ -28,8 +28,8 @@ export default function SmartCampusPage() {
   return (
     <>
       <PageHero
-        eyebrow="Solusi 02, Smart Campus & Audio Visual"
-        title="Smart Campus & Audio Visual."
+        eyebrow="Solusi 04, Smart Audio Visual"
+        title="Smart Audio Visual."
         description="Kualitas audio visual terbaca sebagai marwah institusi. Dari aula kebanggaan hingga ruang kelas interaktif, kami menghadirkan pengalaman acara dan pembelajaran yang prima."
         crumb={{ label: 'Solutions', to: '/solutions' }}
       />
@@ -85,7 +85,7 @@ export default function SmartCampusPage() {
           {/* Large editorial image */}
           <Reveal className="mt-12 overflow-hidden">
             <img
-              src={images.lectureHall}
+              src={images.audiovisual}
               alt="Spacious lecture hall with tiered seating"
               className="aspect-[21/9] w-full object-cover"
               loading="lazy"

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu } from 'lucide-react';
 import { navItems } from '@/data/company';
-import { megaMenuItems } from '@/data/solutions';
+import { megaMenuItems } from '@/data/solutionMenu';
 import Logo from '@/components/Logo';
 import MobileMenu from '@/components/MobileMenu';
 

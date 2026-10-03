@@ -19,6 +19,7 @@ export const globalPartners: string[] = [
   'Camfil',
   'Parker',
   'Protea',
+  'ITplus'
 ];
 
 export const partnerLogos: Record<string, string> = {
@@ -42,19 +43,41 @@ export const partnerLogos: Record<string, string> = {
   Camfil: '/images/partners/camfil.png',
   Parker: '/images/partners/parker.png',
   Protea: '/images/partners/protea.jpg',
+  ITplus: '/images/partners/itplus.png',
 };
 
-export const localPartner = {
-  name: 'ITPlus',
-  products: [
-    'Display LED (TKDN)',
-    'Videowall (TKDN)',
-    'Panel Datar Interaktif (TKDN)',
-    'Perangkat Audio Visual (TKDN)',
-  ],
+export const partnerLogoSizing: Record<string, string> = {
+  Samsung: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  Cisco: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  HP: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  Dell: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  'Schneider Electric': 'max-h-14 max-w-[100px] sm:max-h-20 sm:max-w-[135px]',
+  Siemens: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  Epson: 'max-h-14 max-w-[105px] sm:max-h-20 sm:max-w-[140px]',
+  Logitech: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  Poly: 'max-h-14 max-w-[105px] sm:max-h-20 sm:max-w-[140px]',
+  Kramer: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  APC: 'max-h-14 max-w-[105px] sm:max-h-20 sm:max-w-[140px]',
+  Extron: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  Zyrex: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  'Fuji Electric': 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  ABB: 'max-h-14 max-w-[105px] sm:max-h-20 sm:max-w-[140px]',
+  AVEVA: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  dataPARC: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  Camfil: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
+  Parker: 'max-h-14 max-w-[105px] sm:max-h-20 sm:max-w-[140px]',
+  Protea: 'max-h-12 max-w-[115px] sm:max-h-16 sm:max-w-[155px]',
+  ITplus: 'max-h-10 max-w-[130px] sm:max-h-14 sm:max-w-[180px]',
 };
 
-export const eprocurementBadges: string[] = [
-  'INAPROC',
-  'Katalog Elektronik LKPP',
+
+export const eprocurementBadges = [
+  {
+    label: 'INAPROC',
+    href: 'https://katalog.inaproc.id/ioni-jaya',
+  },
+  {
+    label: 'PaDi UMKM',
+    href: 'https://padiumkm.id/store/68df79a9cea114331171fb66',
+  },
 ];

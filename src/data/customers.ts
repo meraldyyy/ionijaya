@@ -25,7 +25,6 @@ export const customerLogos: Record<string, string> = {
   Pertamina: '/images/customers/pertamina.svg',
   MedcoEnergi: '/images/customers/medco.png',
   'Star Energy': '/images/customers/star.jpg',
-  Eni: '/images/customers/eni.png',
   'ENI Muara Bakau': '/images/customers/eni.png',
   'Sarulla Operation': '/images/customers/sarulla.png',
   'RSUP Fatmawati': '/images/customers/fatmawati.png',
@@ -37,6 +36,7 @@ export const customerLogos: Record<string, string> = {
   'Medco Ratch Power Riau (MRPR)': '/images/customers/medcoratchpowerriau.jpeg',
   'Mitra Energi Pelayaran': '/images/customers/mitraenergipelayaran.jpeg',
   'PTPN XI': '/images/customers/ptpn.jpg',
+  'Unsri': '/images/customers/unsri.png',
 };
 
 export const customerLogoSideLabels: Record<string, string> = {
@@ -50,11 +50,11 @@ export const customerLogoSideLabels: Record<string, string> = {
   'Universitas Terbuka (UT)': 'Universitas Terbuka (UT)',
   MedcoEnergi: 'Medco Energi',
   'Star Energy': 'Star Energy Geothermal',
-  Eni: 'ENI',
   'ENI Muara Bakau' : 'Eni Muara Bakau',
   'RSUP Fatmawati': 'RSUP Fatmawati',
   'Mitra Energi Pelayaran': 'Mitra Energi Pelayaran',
   'PTPN XI': 'PT Perkebunan Nusantara XI',
+  'Unsri': 'Universitas Sriwijaya',
 };
 
 export const largeCustomerLogos = new Set([
@@ -79,7 +79,7 @@ export const customers: CustomerCategory[] = [
   {
     industry: 'Pendidikan Tinggi',
     icon: GraduationCap,
-    organizations: ['Universitas Indonesia (UI)', 'Universitas Terbuka (UT)'],
+    organizations: ['Universitas Indonesia (UI)', 'Universitas Terbuka (UT)', 'Unsri'],
   },
   {
     industry: 'Energi & Industri',
@@ -89,7 +89,6 @@ export const customers: CustomerCategory[] = [
       'Sarulla Operation',
       'MedcoEnergi',
       'Star Energy',
-      'Eni',
       'ENI Muara Bakau',
     ],
   },

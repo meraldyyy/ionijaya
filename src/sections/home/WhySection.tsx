@@ -13,14 +13,18 @@ export default function WhySection() {
           light
         />
 
-        <div className="mt-14 grid gap-px border border-white/10 bg-white/5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-px border border-white/10 bg-white/5 md:grid-cols-2 lg:grid-cols-6">
           {pillars.map((p, i) => {
             const Icon = p.icon;
             return (
               <Reveal
                 key={p.title}
                 delay={(i % 3) * 80}
-                className="group relative bg-navy-950 p-8 transition-colors duration-500 hover:bg-navy-900"
+                className={`group relative bg-navy-950 p-8 transition-colors duration-500 hover:bg-navy-900 ${
+                  i > 2 ? 'lg:col-span-3' : 'lg:col-span-2'
+                } ${
+                  i === 4 ? 'lg:col-start-4' : ''
+                }`}
               >
                 <span className="font-display text-xs font-bold text-accent-400/70">
                   {String(i + 1).padStart(2, '0')}

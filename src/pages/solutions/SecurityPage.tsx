@@ -35,7 +35,7 @@ export default function SecurityPage() {
       <PageHero
         eyebrow="Solusi 01, Keamanan & Pengawasan"
         title="Pengawasan Cerdas, Command Center & Kontrol Akses."
-        description="Solusi pengamanan menyeluruh — dari perimeter fisik hingga ruang kendali — yang menyatukan kamera, kontrol akses, dan visualisasi data dalam satu sistem terpusat untuk pengambilan keputusan yang cepat."
+        description="Solusi pengamanan menyeluruh dari perimeter fisik hingga ruang kendali yang menyatukan kamera, kontrol akses, dan visualisasi data dalam satu sistem terpusat untuk pengambilan keputusan yang cepat."
         crumb={{ label: 'Solutions', to: '/solutions' }}
       />
 

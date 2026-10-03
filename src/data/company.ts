@@ -18,8 +18,8 @@ export const company = {
     line2: 'Jl. Pajajaran No. 24G',
     line3: 'Pamulang, Tangerang Selatan',
   },
-  eprocurementBadges: ['INAPROC', 'LPSE', 'LKPP', 'SIKAP'],
-  eprocurementVerified: 'INAPROC, LPSE, LKPP, SIKAP Terverifikasi',
+  eprocurementBadges: ['INAPROC', 'PaDI'],
+  eprocurementVerified: 'INAPROC, PaDI',
 };
 
 export const navItems = [

@@ -1,8 +1,8 @@
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import ButtonLink from '@/components/ButtonLink';
-import { experiences, supportVendors } from '@/data/experiences';
-import { Wrench } from 'lucide-react';
+import { experiences, serviceExperiences } from '@/data/experiences';
+import { ChevronRight } from 'lucide-react';
 
 export default function ExperiencesPage() {
   return (
@@ -50,25 +50,43 @@ export default function ExperiencesPage() {
         </div>
       </section>
 
-      {/* Support vendors */}
-      <section className="section-pad bg-mist-50">
+      
+
+      <section className="section-pad bg-navy-950 text-white">
         <div className="container-x">
-          <Reveal className="flex flex-col items-center gap-6 text-center">
-            <div className="flex items-center gap-3">
-              <Wrench className="h-5 w-5 text-accent-600" />
-              <p className="eyebrow">Vendor pendukung</p>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              {supportVendors.map((v) => (
-                <span
-                  key={v}
-                  className="border border-navy-900/15 bg-white px-5 py-2.5 font-display text-sm font-bold text-navy-700"
-                >
-                  {v}
-                </span>
-              ))}
-            </div>
-          </Reveal>
+          <div className="max-w-2xl">
+            <p className="eyebrow text-accent-400">Selected experience</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
+              A Few of the Many Ways We Help
+            </h2>
+            <p className="mt-5 text-sm leading-relaxed text-navy-200 md:text-base">
+              Dari infrastruktur perangkat hingga ruang kolaborasi dan monitoring,
+              kami membantu institusi menjaga operasional tetap siap dan terhubung.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-x-12 gap-y-10 md:grid-cols-2 md:gap-y-12">
+            {serviceExperiences.map((experience, i) => (
+              <Reveal key={experience.client} delay={(i % 2) * 80}>
+                <div className="border-t border-white/15 pt-5">
+                  <h3 className="text-lg font-bold text-white md:text-xl">
+                    {experience.client}
+                  </h3>
+                  <ul className="mt-4 space-y-2.5">
+                    {experience.services.map((service) => (
+                      <li
+                        key={service}
+                        className="flex items-start gap-2 text-sm leading-relaxed text-navy-100 md:text-base"
+                      >
+                        <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-accent-400" />
+                        <span>{service}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

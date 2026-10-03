@@ -33,7 +33,7 @@ export default function Hero() {
             className="reveal is-visible flex items-center gap-3"
             style={{ transitionDelay: '0ms' }}
           >
-            <span className="h-px w-10 bg-accent-500" />
+            
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
               {company.name} · Established {company.established}
             </span>

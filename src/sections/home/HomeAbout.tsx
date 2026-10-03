@@ -44,7 +44,7 @@ export default function HomeAbout() {
           <Reveal delay={100}>
             <p className="mt-6 text-base leading-relaxed text-navy-700/85 md:text-lg">
               Didirikan pada tahun 2000, PT IONI JAYA memulai perjalanan sebagai
-              penyedia peralatan IT untuk sektor energi. Dengan pengalaman lebih
+              penyedia peralatan IT. Dengan pengalaman lebih
               dari 20 tahun, perusahaan berkembang menjadi mitra solusi teknologi
               tepercaya bagi institusi pemerintah, pendidikan tinggi, energi,
               kesehatan, dan infrastruktur di seluruh Indonesia.

@@ -1,5 +1,4 @@
 import {
-  ShieldCheck,
   FileCheck2,
   UserCheck,
   Layers,
@@ -16,15 +15,9 @@ export interface Pillar {
 
 export const pillars: Pillar[] = [
   {
-    title: 'TKDN & Buatan Indonesia',
-    description:
-      'Komponen dalam negeri yang selaras dengan regulasi dan kedaulatan teknologi nasional.',
-    icon: ShieldCheck,
-  },
-  {
     title: 'Terdaftar Resmi',
     description:
-      'LKPP, LPSE, INAPROC, SIKAP siap untuk proses pengadaan barang & jasa pemerintah.',
+      'LKPP, LPSE, INAPROC, PaDI, E Catalogue siap untuk proses pengadaan barang & jasa pemerintah.',
     icon: FileCheck2,
   },
   {

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { navItems } from '@/data/company';
-import { megaMenuItems } from '@/data/solutions';
+import { megaMenuItems } from '@/data/solutionMenu';
 import Logo from '@/components/Logo';
 
 interface MobileMenuProps {

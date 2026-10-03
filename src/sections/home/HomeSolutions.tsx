@@ -1,4 +1,4 @@
-import { solutions } from '@/data/solutions';
+import { allSolutions } from '@/data/solutionMenu';
 import SectionHeading from '@/components/SectionHeading';
 import SolutionCard from '@/components/SolutionCard';
 
@@ -14,8 +14,8 @@ export default function HomeSolutions() {
           />
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {solutions.map((solution, i) => (
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:[&>*:nth-last-child(-n+2)]:col-span-2">
+          {allSolutions.map((solution, i) => (
             <SolutionCard key={solution.slug} solution={solution} index={i} />
           ))}
         </div>

@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star } from 'lucide-react';
-import { type Solution } from '@/data/solutions';
+import { ArrowRight, } from 'lucide-react';
+import { type SolutionSummary } from '@/data/solutionMenu';
 import Reveal from '@/components/Reveal';
 
 interface SolutionCardProps {
-  solution: Solution;
+  solution: SolutionSummary;
   index: number;
 }
 
@@ -16,13 +16,7 @@ export default function SolutionCard({ solution, index }: SolutionCardProps) {
         to={solution.href}
         className="relative flex h-full flex-col border border-navy-900/10 bg-white p-8 transition-all duration-500 hover:border-navy-900/25 hover:shadow-[0_24px_60px_-30px_rgba(16,31,56,0.25)]"
       >
-        <div className="pointer-events-none absolute left-0 top-0 h-1 w-0 bg-accent-500 transition-all duration-500 group-hover:w-full" />
-        {solution.flagship && (
-          <span className="absolute right-6 top-6 inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.1em] text-accent-600">
-            <Star className="h-3 w-3 fill-accent-500 text-accent-500" />
-            Flagship
-          </span>
-        )}
+
         <div className="flex items-start justify-between">
           <span className="font-display text-sm font-bold text-navy-300">
             {solution.number}
@@ -41,7 +35,7 @@ export default function SolutionCard({ solution, index }: SolutionCardProps) {
           {solution.short}
         </p>
         <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 transition-colors group-hover:text-accent-600">
-          Jelajahi solusi
+          Lebih Lanjut
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </Link>

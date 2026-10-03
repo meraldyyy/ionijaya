@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Globe, BadgeCheck } from 'lucide-react';
 import { company } from '@/data/company';
-import { solutions, managedService } from '@/data/solutions';
+import { allSolutions } from '@/data/solutionMenu';
 import Logo from '@/components/Logo';
 
 export default function Footer() {
@@ -62,7 +62,7 @@ export default function Footer() {
               Solusi
             </h4>
             <ul className="mt-5 space-y-3 text-sm">
-              {solutions.map((s) => (
+              {allSolutions.map((s) => (
                 <li key={s.slug}>
                   <Link
                     to={s.href}
@@ -72,14 +72,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to={managedService.href}
-                  className="text-navy-300 transition-colors hover:text-white"
-                >
-                  {managedService.title}
-                </Link>
-              </li>
             </ul>
           </div>
 
